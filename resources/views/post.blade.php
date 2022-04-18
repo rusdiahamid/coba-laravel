@@ -6,6 +6,7 @@
     <h5>{{ $post->author }} </h5>
   
     {!! $post->body !!}
+    
 
     
 </article>

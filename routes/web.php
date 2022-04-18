@@ -21,8 +21,7 @@ Route::get('/', function () {
     ]);
 });
 
-Route::get('/about', [PostController::class, 'about']);
-
+Route::get('/about', [PostController::class, 'about']);;
 Route::get('/posts', [PostController::class, 'index']);
 
 //halaman single post
