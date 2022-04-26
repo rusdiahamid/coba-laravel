@@ -37,16 +37,17 @@ Route::get('/categories', function () {
 });
 
 Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('category', [
-        'title' => $category->name,
-        'posts' => $category->posts,
+    return view('posts', [
+        'title' => "Post by Category : $category->name",
+        'posts' => $category->posts->load('author', 'category'),
         'category' => $category->name
     ]);
 });
 
 Route::get('/authors/{author:username}', function (User $author) {
     return view('posts', [
-        'title' => 'User Posts',
-        'posts' => $author->posts,
+        'title' => "Post by Author : $author->name",
+        'posts' => $author->posts->load('category', 'author'),
+        // lazy eager loading --> load
     ]);
 });
