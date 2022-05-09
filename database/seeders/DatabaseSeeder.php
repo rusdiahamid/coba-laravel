@@ -23,11 +23,15 @@ class DatabaseSeeder extends Seeder
             'slug' => 'web-programming'
         ]);
         Category::create([
+            'name' => 'Web Design',
+            'slug' => 'web-design'
+        ]);
+        Category::create([
             'name' => 'Personal',
             'slug' => 'personal'
         ]);
 
-        Post::factory(20)->create();
+        Post::factory(30)->create();
 
         // User::create([
         //     'name' => 'Rusdia Hamid',
@@ -77,6 +81,15 @@ class DatabaseSeeder extends Seeder
         //     'body' => 'Angular is a JavaScript library for building user interfaces. It is maintained by Facebook, and it is designed to be incrementally adoptable across the entire development lifecycle. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquid aspernatur labore sit inventore praesentium possimus ipsam? Aperiam eum, eligendi porro quidem illo impedit quasi quae saepe laudantium rerum. Recusandae omnis doloribus placeat sequi reprehenderit veniam odio porro quos dignissimos.',
         //     'category_id' => 2,
         //     'user_id' => 2,
+        // ]);
+
+        // Post::create([
+        //     'title' => 'figma',
+        //     'slug' => 'figma',
+        //     'excerpt' => 'Figma is a tool for designing and prototyping interactive interfaces. It is a free and open-source software, and it is developed by Facebook.',
+        //     'body' => 'Figma is a tool for designing and prototyping interactive interfaces. It is a free and open-source software, and it is developed by Facebook. Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur aliquid aspernatur labore sit inventore praesentium possimus ipsam? Aperiam eum, eligendi porro quidem illo impedit quasi quae saepe laudantium rerum. Recusandae omnis doloribus placeat sequi reprehenderit veniam odio porro quos dignissimos.',
+        //     'category_id' => 2,
+        //     'user_id' => 1,
         // ]);
     }
 }

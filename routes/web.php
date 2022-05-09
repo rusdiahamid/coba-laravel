@@ -19,7 +19,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('home', [
-        "title" => "Home"
+        "title" => "Home",
+        "active" => "home"
     ]);
 });
 
@@ -32,22 +33,7 @@ Route::get('posts/{post:slug}', [PostController::class, 'show']);
 Route::get('/categories', function () {
     return view('categories', [
         'title' => 'Post Categories',
+        'active' => 'categories',
         'categories' => Category::all()
-    ]);
-});
-
-Route::get('/categories/{category:slug}', function (Category $category) {
-    return view('posts', [
-        'title' => "Post by Category : $category->name",
-        'posts' => $category->posts->load('author', 'category'),
-        'category' => $category->name
-    ]);
-});
-
-Route::get('/authors/{author:username}', function (User $author) {
-    return view('posts', [
-        'title' => "Post by Author : $author->name",
-        'posts' => $author->posts->load('category', 'author'),
-        // lazy eager loading --> load
     ]);
 });
