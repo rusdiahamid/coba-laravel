@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <h1 class="mb-3">{{ $post->title }}</h1>
 
-            <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span> Back to mu posts</a>
+            <a href="/dashboard/posts" class="btn btn-success"><span data-feather="arrow-left"></span> Back to my posts</a>
             <a href="" class="btn btn-warning align-items-center"><span data-feather="edit"></span> Edit</a>
             <a href="" class="btn btn-danger"><span data-feather="x-circle"></span> Delete</a>
                      
@@ -18,7 +18,6 @@
 
             </article>
 
-            <a href="/posts" class="d-block mt-3">Back to Posts</a>
         </div>
     </div>
 </div>
